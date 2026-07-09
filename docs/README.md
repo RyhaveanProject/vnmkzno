@@ -1,18 +1,47 @@
-# Documentation — Multi-Chain Casino Games
+# 🎰 Venom Casino
 
-Welcome to the docs for this **multi-chain casino game** smart contract suite (Solana + EVM). If you’re building a **Web3 casino game** or **Solana casino game** frontend, start here.
+**Venom Casino** is a modern open-source online casino platform built for speed, scalability, and an excellent user experience. The project is designed with a clean architecture, responsive interface, and easy customization for developers.
 
-## Start here
+## ✨ Features
 
-- **Quickstart**: [`GETTING_STARTED.md`](./GETTING_STARTED.md)
-- **Games**: [`GAMES.md`](./GAMES.md)
-- **API reference**: [`API.md`](./API.md)
-- **Deployment**: [`DEPLOYMENT.md`](./DEPLOYMENT.md)
-- **Architecture**: [`ARCHITECTURE.md`](./ARCHITECTURE.md)
-- **FAQ**: [`FAQ.md`](./FAQ.md)
+- 🎲 Multiple casino games
+- ⚡ Fast and responsive interface
+- 📱 Mobile-friendly design
+- 🔐 Secure authentication system
+- 💰 Wallet & balance management
+- 🎁 Bonus & reward system
+- 📊 Admin dashboard
+- 🌍 Multi-language support
+- 🔧 Easy configuration
+- 🚀 Production-ready structure
 
-## Repository policies
+## 🛠️ Tech Stack
 
-- **Security**: [`../SECURITY.md`](../SECURITY.md)
-- **Contributing**: [`../CONTRIBUTING.md`](../CONTRIBUTING.md)
-- **Changelog**: [`../CHANGELOG.md`](../CHANGELOG.md)
+- Frontend
+- Backend
+- Database
+- REST API
+- WebSocket (Real-time Features)
+
+## 📂 Installation
+
+```bash
+git clone https://github.com/UsersRaven/venom-casino.git
+cd venom-casino
+```
+
+Install dependencies and configure the environment according to your project requirements.
+
+## 📜 License
+
+This project is intended for educational and development purposes.
+
+## 👨‍💻 Developer
+
+**UsersRaven**
+
+Telegram: https://t.me/UsersRaven
+
+---
+
+⭐ If you like this project, don't forget to leave a star on GitHub!
