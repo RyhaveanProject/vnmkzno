@@ -1,0 +1,22 @@
+{
+  "name": "venom-kazino-miniapp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "userbot": "node src/userbot.js",
+    "check": "node scripts/smoke-check.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "telegram": "^2.26.22",
+    "mongoose": "^8.17.0",
+    "morgan": "^1.10.0",
+    "node-fetch": "^3.3.2",
+    "telegraf": "^4.16.3"
+  }
+}
