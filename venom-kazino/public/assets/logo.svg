@@ -1,0 +1,17 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="112" fill="url(#g)"/>
+  <path d="M111 175C152 128 216 110 281 117C334 123 390 151 420 197C359 178 312 189 280 224C255 252 247 292 264 320C286 356 339 365 382 341C365 389 319 421 261 426C181 434 106 383 92 304C84 258 91 211 111 175Z" fill="#7CFF9E"/>
+  <path d="M171 170C215 149 273 154 311 184C274 181 245 193 225 218C211 235 207 260 218 279C232 302 264 306 291 293C282 323 251 346 212 347C158 349 114 307 113 254C112 219 132 188 171 170Z" fill="#062A1C"/>
+  <circle cx="298" cy="216" r="14" fill="#F8FAFC"/>
+  <circle cx="301" cy="216" r="6" fill="#111827"/>
+  <path d="M315 120L335 78L356 120H315Z" fill="#FACC15"/>
+  <path d="M281 120L301 92L321 120H281Z" fill="#FDE68A"/>
+  <text x="50%" y="418" text-anchor="middle" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="50" font-weight="700">VENOM KAZINO</text>
+  <defs>
+    <linearGradient id="g" x1="52" y1="25" x2="471" y2="505" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4F46E5"/>
+      <stop offset="0.48" stop-color="#111827"/>
+      <stop offset="1" stop-color="#14532D"/>
+    </linearGradient>
+  </defs>
+</svg>
