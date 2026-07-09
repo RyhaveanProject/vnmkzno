@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Venom Kazino</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <img src="/assets/logo.svg" alt="Venom Kazino" class="logo" />
+      <div>
+        <p class="eyebrow">Telegram Mini App</p>
+        <h1>Venom Kazino</h1>
+        <p class="sub">Telegram Stars balans, Telegram hesabı ilə giriş, MongoDB tarixçə və 10 oyun mexanikası.</p>
+      </div>
+    </header>
+
+    <section class="grid top-grid">
+      <article class="card balance-card">
+        <h2>Hesab</h2>
+        <div id="profileBox">Yüklənir...</div>
+        <div class="balance-box"><span>Balans</span><strong id="balanceValue">0</strong> <span>Stars</span></div>
+        <button id="refreshBtn" class="btn secondary">Yenilə</button>
+      </article>
+
+      <article class="card">
+        <h2>Deposit</h2>
+        <p>Rəsmi Telegram Stars invoice və əlavə olaraq admin hesabına gift izləmə dəstəyi.</p>
+        <div class="button-row">
+          <button class="btn" data-deposit="50">50 ⭐</button>
+          <button class="btn" data-deposit="100">100 ⭐</button>
+          <button class="btn" data-deposit="250">250 ⭐</button>
+          <button class="btn" data-deposit="500">500 ⭐</button>
+        </div>
+        <div class="note" id="giftInfo"></div>
+      </article>
+
+      <article class="card">
+        <h2>Çıxarış</h2>
+        <label>Məbləğ
+          <input id="withdrawAmount" type="number" min="100" value="100" />
+        </label>
+        <label>Məlumat
+          <input id="withdrawDetails" type="text" placeholder="Telegram username və ya ödəniş qeydi" />
+        </label>
+        <button id="withdrawBtn" class="btn danger">8% komissiya ilə çıxarış</button>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>Sadə oyunlar</h2>
+      <div class="grid games-grid">
+        <div class="game-box">
+          <h3>CoinFlip</h3>
+          <input id="coinflipBet" type="number" value="25" />
+          <select id="coinflipChoice"><option value="heads">Heads</option><option value="tails">Tails</option></select>
+          <button class="btn play-btn" data-game="coinflip">Oyna</button>
+        </div>
+        <div class="game-box">
+          <h3>Dice</h3>
+          <input id="diceBet" type="number" value="25" />
+          <input id="diceTarget" type="number" value="60" min="2" max="99" />
+          <select id="diceMode"><option value="under">Under</option><option value="over">Over</option></select>
+          <button class="btn play-btn" data-game="dice">Oyna</button>
+        </div>
+        <div class="game-box">
+          <h3>Crash</h3>
+          <input id="crashBet" type="number" value="25" />
+          <input id="crashAuto" type="number" step="0.01" value="2.00" />
+          <button class="btn play-btn" data-game="crash">Oyna</button>
+        </div>
+        <div class="game-box">
+          <h3>Plinko</h3>
+          <input id="plinkoBet" type="number" value="25" />
+          <select id="plinkoRows"><option>8</option><option>10</option><option selected>12</option><option>16</option></select>
+          <button class="btn play-btn" data-game="plinko">Oyna</button>
+        </div>
+        <div class="game-box">
+          <h3>Roulette</h3>
+          <input id="rouletteBet" type="number" value="25" />
+          <select id="rouletteType"><option value="color">Red/Black</option><option value="oddEven">Odd/Even</option><option value="highLow">High/Low</option><option value="single">Single</option><option value="dozen">Dozen</option></select>
+          <input id="rouletteValue" type="text" value="red" />
+          <button class="btn play-btn" data-game="roulette">Oyna</button>
+        </div>
+        <div class="game-box">
+          <h3>Slots</h3>
+          <input id="slotsBet" type="number" value="25" />
+          <button class="btn play-btn" data-game="slots">Spin</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Blackjack</h2>
+        <div class="button-row">
+          <input id="blackjackBet" type="number" value="50" />
+          <button id="blackjackStart" class="btn">Start</button>
+          <button id="blackjackHit" class="btn secondary">Hit</button>
+          <button id="blackjackStand" class="btn secondary">Stand</button>
+        </div>
+        <pre id="blackjackBox" class="output small"></pre>
+      </article>
+
+      <article class="card">
+        <h2>Jackpot</h2>
+        <div class="button-row">
+          <input id="jackpotBet" type="number" value="20" />
+          <button id="jackpotPlay" class="btn">Jackpot giriş</button>
+        </div>
+        <pre id="jackpotBox" class="output small"></pre>
+      </article>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Lottery</h2>
+        <label>Bet
+          <input id="lotteryBet" type="number" value="10" />
+        </label>
+        <label>6 rəqəm (vergüllə)
+          <input id="lotteryNumbers" type="text" value="1,7,13,25,36,49" />
+        </label>
+        <div class="button-row">
+          <button id="lotteryBuy" class="btn">Ticket al</button>
+          <button id="lotteryRefresh" class="btn secondary">Status</button>
+        </div>
+        <pre id="lotteryBox" class="output small"></pre>
+      </article>
+
+      <article class="card">
+        <h2>Poker turnir</h2>
+        <label>Buy-in
+          <input id="pokerBuyIn" type="number" value="100" />
+        </label>
+        <label>Maks oyunçu
+          <input id="pokerMaxPlayers" type="number" value="4" min="2" max="6" />
+        </label>
+        <div class="button-row">
+          <button id="pokerJoin" class="btn">Masaya qoşul</button>
+          <button id="pokerRefresh" class="btn secondary">Masalar</button>
+        </div>
+        <pre id="pokerBox" class="output small"></pre>
+      </article>
+    </section>
+
+    <section class="card">
+      <h2>Tarixçə və nəticələr</h2>
+      <pre id="resultBox" class="output"></pre>
+      <div id="txList" class="tx-list"></div>
+    </section>
+  </div>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
